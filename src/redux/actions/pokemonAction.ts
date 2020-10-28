@@ -11,14 +11,14 @@ export const GetPokemon = (pokemon: string) => async (
   dispatch: Dispatch<PokemonDispatchTypes>
 ) => {
   try {
-    dispatch({ type: POKEMON_LOADING, pa: "asd" });
+    dispatch({ type: POKEMON_LOADING });
 
-    const res = await axios.get(`https://pokeapi/api/v2/pokemon/${pokemon}`);
-    console.log(res);
+    const res = await axios.get(`https://pokeapi.co/api/v2/pokemon/${pokemon}`);
+    console.log(1, res);
 
     dispatch({ type: POKEMON_SUCCESS, payload: res.data });
   } catch (err) {
-    console.log(err);
+    console.log("err = ", err);
     dispatch({ type: POKEMON_FAIL });
   }
 };

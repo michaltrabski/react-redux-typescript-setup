@@ -13,7 +13,7 @@ export type PokemonAbility = {
 };
 
 export type PokemonSprites = {
-  front_dafault: string;
+  front_default: string;
 };
 
 export type PokemonStat = {
