@@ -6,19 +6,19 @@ import {
   POKEMON_SUCCESS,
 } from "../actions/pokemonActionTypes";
 
-interface DefaultStatePokemon {
+interface PokemonStateInterface {
   loading: boolean;
   pokemon?: PokemonType;
 }
 
-const defaultStatePokemon = {
+const pokemonInitialState = {
   loading: false,
 };
 
 const pokemonReducer = (
-  state: DefaultStatePokemon = defaultStatePokemon,
+  state: PokemonStateInterface = pokemonInitialState,
   action: PokemonDispatchTypes
-): DefaultStatePokemon => {
+): PokemonStateInterface => {
   switch (action.type) {
     case POKEMON_FAIL:
       state = {
