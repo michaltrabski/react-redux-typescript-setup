@@ -7,9 +7,11 @@ import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
+import { PokemonType } from "../redux/actions/pokemonActionTypes";
 
 interface Props {
   imageUrl: string;
+  pokemon: PokemonType;
 }
 const useStyles = makeStyles({
   root: {
@@ -23,6 +25,8 @@ const useStyles = makeStyles({
 const MuiCard = (props: Props) => {
   const classes = useStyles();
   const { imageUrl } = props;
+  const { pokemon } = props;
+  console.log("MuiCard pokemon = ", pokemon);
 
   return (
     <Card className={classes.root}>
@@ -34,11 +38,10 @@ const MuiCard = (props: Props) => {
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
-            Lizard
+            {pokemon.name}
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-            Lizards are a widespread group of squamate reptiles, with over 6,000
-            species, ranging across all continents except Antarctica
+            Description will be awailable soon...
           </Typography>
         </CardContent>
       </CardActionArea>

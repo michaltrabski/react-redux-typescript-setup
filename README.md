@@ -1,6 +1,6 @@
 # react-redux-typescript-setup
 
-See this project live [https://react-redux-typescript-setup.netlify.app](here)
+See this project live [here](https://react-redux-typescript-setup.netlify.app)
 
 ## Description
 
@@ -11,9 +11,9 @@ This project is my guid how to set up react with redux and typescript all togeth
 In this project I have used:
 
 - `React`
-
 - `Redux`
-
-- Typescript
-
-- Material UI
+- `Thunk`
+- `Typescript`
+- `Material UI`
+- `Axios`
+- `redux-devtools-extension`

@@ -6,6 +6,7 @@ export type PokemonType = {
   abilities: PokemonAbility[];
   sprites: PokemonSprites;
   stats: PokemonStat[];
+  name: string;
 };
 
 export type PokemonAbility = {
